@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import PhoneIcon from "@mui/icons-material/Phone";
-import EmailIcon from "@mui/icons-material/Email";
+
 import GitHubIcon from "@mui/icons-material/GitHub";
 const ProjectProfile = () => {
     return (
@@ -11,28 +10,21 @@ const ProjectProfile = () => {
                 justifyContent: "center",
                 position: "relative",
                 top: "12.5%",
+                alignItems: "center",
             }}
         >
-            <Box sx={{ width: "50%", padding: "20px 0px" }}>
+            <Box sx={{ width: { md: "70%", xs: "100%" } }}>
                 {/* Education */}
-                <Typography variant="h4" noWrap>
-                    Website Blog:
-                </Typography>
-                <Box sx={{ paddingLeft: "10%", margin: "1rem 0px" }}>
-                    <Typography variant="h6">
-                        Techniques: HTML ,CSS(Boostrap), javascript, C#(MVC), SQL server
+                <Typography variant="h4">Website Blog:</Typography>
+                <Box sx={{ paddingLeft: "5%", margin: "1rem 0px" }}>
+                    <Typography>
+                        Techniques: HTML ,CSS(Boostrap), javascript, C#(MVC), SQL-server.
                     </Typography>
-                    <Typography variant="h6" noWrap>
-                        Group: 2
+                    <Typography>Group: 2.</Typography>
+                    <Typography>
+                        Function Description: CRUD users, posts, Search categories.
                     </Typography>
-                    <Typography variant="h6">
-                        Function Description: CRUD users, posts, Search categories
-                    </Typography>
-
-                    <Typography
-                        variant="h6"
-                        sx={{ display: "flex", alignItems: "center" }}
-                    >
+                    <Typography sx={{ display: "flex", alignItems: "center" }}>
                         <GitHubIcon />{" "}
                         <a href="https://github.com/AndrewZKn/P_WebBlog">
                             https://github.com/AndrewZKn/P_WebBlog
@@ -43,19 +35,16 @@ const ProjectProfile = () => {
                 <Typography variant="h4" noWrap sx={{ marginBottom: "1rem" }}>
                     Website Dried Food
                 </Typography>
-                <Box sx={{ paddingLeft: "10%", margin: "1rem 0px" }}>
-                    <Typography variant="h6">
-                        Techniques: javascript(reactJS), sass, nodejs(expressJS), mongodb
+                <Box sx={{ paddingLeft: "5%", margin: "1rem 0px" }}>
+                    <Typography>
+                        Techniques: javascript(reactJS), sass, nodejs(expressJS), mongodb.
                     </Typography>
-                    <Typography variant="h6">Group: 4</Typography>
-                    <Typography variant="h6">
+                    <Typography>Group: 4</Typography>
+                    <Typography>
                         Function Description:CRUD users and products, Add product to cart,
                         Paypal payment, Filter products.
                     </Typography>
-                    <Typography
-                        variant="h6"
-                        sx={{ display: "flex", alignItems: "center" }}
-                    >
+                    <Typography sx={{ display: "flex", alignItems: "center" }}>
                         <GitHubIcon />:
                         <div style={{ marginLeft: "10px" }}>
                             <span style={{ color: "red", marginRight: "10px" }}>Error</span>

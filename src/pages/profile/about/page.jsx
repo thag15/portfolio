@@ -15,36 +15,44 @@ const AboutProfile = () => {
                 top: "12.5%",
             }}
         >
-            <Box sx={{ width: "50%", padding: "20px 0px" }}>
-                {/* Education */}
-                <Typography variant="h3" noWrap>
-                    Education:
-                </Typography>
-                <Box sx={{ paddingLeft: "20%", margin: "1rem 0px" }}>
-                    <Typography variant="h5" noWrap>
-                        - Studying at NTTU University 2020-Present
+            <Box
+                sx={{
+                    width: { xs: "100%", md: "70%" },
+                    display: "flex",
+                    alignItems: "center",
+                    borderBottom: '1px solid #000'
+                }}
+            >
+                <Box sx={{ width: '100%' }}>
+                    {/* Education */}
+                    <Typography variant="h4">Education:</Typography>
+                    <Box sx={{ paddingLeft: "5%", margin: "1rem 0px", width: "100%" }}>
+                        <Typography sx={{ width: "100%" }}>
+                            Studying at NTTU University 2020-Present.
+                        </Typography>
+                        <Typography>Specialized: Software engineer.</Typography>
+                        <Typography>Is a fourth year student.</Typography>
+                    </Box>
+                    {/* Contact */}
+                    <Typography variant="h4" sx={{ marginBottom: "1rem" }}>
+                        Contact info:
                     </Typography>
-                    <Typography variant="h5" noWrap>
-                        - Specialized: IT
-                    </Typography>
-                    <Typography variant="h5" noWrap>
-                        - Is a fourth year student.
-                    </Typography>
-                </Box>
-                {/* Contact */}
-                <Typography variant="h3" noWrap sx={{ marginBottom: "1rem" }}>
-                    Contact info:
-                </Typography>
-                <Box sx={{ paddingLeft: "20%", margin: "1rem 0px" }}>
-                    <Typography variant="h5" noWrap>
-                        <PhoneIcon /> 0857511230
-                    </Typography>
-                    <Typography variant="h5" noWrap>
-                        <EmailIcon /> hoquocthang150722@gmail.com
-                    </Typography>
-                    <Typography variant="h5" noWrap>
-                        <GitHubIcon /> <span ><a style={{ color: '#000' }} href="https://github.com/thag15">https://github.com/thag15</a></span>
-                    </Typography>
+                    <Box sx={{ paddingLeft: "5%", margin: "1rem 0px" }}>
+                        <Typography>
+                            <PhoneIcon /> 0857511230
+                        </Typography>
+                        <Typography>
+                            <EmailIcon /> hoquocthang150722@gmail.com
+                        </Typography>
+                        <Typography>
+                            <GitHubIcon />{" "}
+                            <span>
+                                <a style={{ color: "#000" }} href="https://github.com/thag15">
+                                    https://github.com/thag15
+                                </a>
+                            </span>
+                        </Typography>
+                    </Box>
                 </Box>
             </Box>
         </Box>

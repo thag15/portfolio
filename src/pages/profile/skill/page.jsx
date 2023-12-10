@@ -14,93 +14,101 @@ const Skill = () => {
             sx={{
                 height: "100%",
                 display: "flex",
-                alignItems: "center",
                 justifyContent: "center",
                 position: "relative",
                 top: "12.5%",
             }}
         >
-            <Box sx={{ width: "50%", padding: "20px 0px" }}>
-                <Typography variant="h4" noWrap>
-                    Front End:
-                </Typography>
-                <Box
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        paddingLeft: "20%",
-                        margin: "1rem 0px",
-                    }}
-                >
-                    <Typography variant="h6" noWrap>
-                        Tool:
-                    </Typography>
-                    <Html5PlainWordmark size="3em" />
-                    <Css3PlainWordmark size="3em" />
-                    <SassOriginal size="3em" />
-                    <JavascriptOriginal size="3em" />
-                </Box>
-                <Box
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        paddingLeft: "20%",
-                        margin: "1rem 0px",
-                    }}
-                >
-                    <Typography variant="h6" noWrap>
-                        Framework:
-                    </Typography>
-                    <ReactOriginalWordmark size="3em" />
-                    <BootstrapPlainWordmark size="3em" />
-                </Box>
-                <Typography variant="h4" noWrap>
-                    Back End:
-                </Typography>
-                <Box
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        paddingLeft: "20%",
-                        margin: "1rem 0px",
-                    }}
-                >
-                    <Typography variant="h6" noWrap>
-                        Framework:
-                    </Typography>
-                    <NodejsOriginalWordmark size="5em" />( expressJs )
-                </Box>
+            <Box
+                sx={{
 
-                <Typography variant="h4" noWrap>
-                    DataBase:
-                </Typography>
-                <Box
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        paddingLeft: "20%",
-                        margin: "1rem 0px",
-                    }}
-                >
-                    <Typography variant="h6" noWrap>
-                        NoSql:
-                    </Typography>
-                    <MongodbOriginalWordmark size="3em" />
+                    width: { xs: "100%", md: "70%" },
+                    borderBottom: "1px solid #000",
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
 
-                </Box>
-                <Box
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        paddingLeft: "20%",
-                        margin: "1rem 0px",
-                    }}
-                >
+                }}
+            >
+                <Box sx={{ width: '100%' }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
 
-                    <Typography variant="h6" noWrap>
-                        Relatioship:
-                    </Typography>
-                    <MicrosoftsqlserverPlainWordmark size="3em" />
+                        {/* fe */}
+                        <Box>
+                            <Typography variant="h4">Front End:</Typography>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    paddingLeft: "5%",
+                                    margin: "1rem 0px",
+                                    width: "100%",
+                                }}
+                            >
+                                <Typography>Tool:</Typography>
+                                <Html5PlainWordmark size="3em" />
+                                <Css3PlainWordmark size="3em" />
+                                <SassOriginal size="3em" />
+                                <JavascriptOriginal size="3em" />
+                            </Box>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    paddingLeft: "5%",
+                                    margin: "1rem 0px",
+                                }}
+                            >
+                                <Typography>Framework:</Typography>
+                                <ReactOriginalWordmark size="3em" />
+                                <BootstrapPlainWordmark size="3em" />
+                            </Box>
+                        </Box>
+                        {/* be */}
+                        <Box>
+                            <Typography variant="h4" noWrap>
+                                Back End:
+                            </Typography>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    paddingLeft: "5%",
+                                    // margin: "1rem 0px",
+                                }}
+                            >
+                                <Typography>Framework:</Typography>
+                                <NodejsOriginalWordmark size="5em" />
+
+                            </Box>
+                        </Box>
+                        <Box>
+
+                            <Typography variant="h4">DataBase:</Typography>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    paddingLeft: "5%",
+                                    margin: "1rem 0px",
+                                }}
+                            >
+                                <Typography>NoSql:</Typography>
+                                <MongodbOriginalWordmark size="3em" />
+                            </Box>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    paddingLeft: "5%",
+                                    margin: "1rem 0px",
+                                }}
+                            >
+                                <Typography>Relatioship:</Typography>
+                                <MicrosoftsqlserverPlainWordmark size="3em" />
+                            </Box>
+                        </Box>
+                    </Box>
                 </Box>
             </Box>
         </Box>
