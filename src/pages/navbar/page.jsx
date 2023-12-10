@@ -16,12 +16,13 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
 
-const pages = [{ name: "profile" }, { name: "myProject" }];
+const pages = [{ name: "profile" }, { name: "myproject" }];
 const settings = ["Logout"];
 
 function NavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [state, setSate] = React.useState(false);
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
@@ -34,9 +35,13 @@ function NavBar() {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+    //
+    const hdlClick = () => {
+        alert('Đang cập nhật')
+    }
     return (
-        <AppBar position="static" sx={{ bgcolor: "#2d3436", }} >
-            <Container maxWidth="xl">
+        <AppBar position="fixed" sx={{ bgcolor: "#2d3436", height: '66px', }}>
+            <Container>
                 <Toolbar disableGutters>
                     <Typography
                         variant="h6"
@@ -52,7 +57,7 @@ function NavBar() {
                             textDecoration: "none",
                         }}
                     >
-                        LOGO
+                        Thag
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                         <IconButton
@@ -106,7 +111,7 @@ function NavBar() {
                             textDecoration: "none",
                         }}
                     >
-                        LOGO
+                        Thag
                     </Typography>
                     <Box
                         sx={{
@@ -116,50 +121,53 @@ function NavBar() {
                         }}
                     >
                         {pages.map((page, index) => (
-
                             <Button
                                 key={index}
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: "white", display: "block" }}
                             >
-                                <NavLink to={page.name}>
-                                    {page.name}
-                                </NavLink>
+                                <NavLink to={page.name} style={{ color: '#fff' }}>{page.name}</NavLink>
                             </Button>
                         ))}
                     </Box>
-                    <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                            </IconButton>
-                        </Tooltip>
-                        <Menu
-                            sx={{ mt: "45px" }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: "top",
-                                horizontal: "right",
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: "top",
-                                horizontal: "right",
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box>
+                    {!state ? (
+                        <Button onClick={() => hdlClick()} sx={{ my: 2, color: "white", display: "block" }}>
+                            Login
+                        </Button>
+                    ) : (
+                        <Box sx={{ flexGrow: 0 }}>
+                            <Tooltip title="Open settings">
+                                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                    <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                </IconButton>
+                            </Tooltip>
+                            <Menu
+                                sx={{ mt: "45px" }}
+                                id="menu-appbar"
+                                anchorEl={anchorElUser}
+                                anchorOrigin={{
+                                    vertical: "top",
+                                    horizontal: "right",
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: "top",
+                                    horizontal: "right",
+                                }}
+                                open={Boolean(anchorElUser)}
+                                onClose={handleCloseUserMenu}
+                            >
+                                {settings.map((setting) => (
+                                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                        <Typography textAlign="center">{setting}</Typography>
+                                    </MenuItem>
+                                ))}
+                            </Menu>
+                        </Box>
+                    )}
                 </Toolbar>
             </Container>
-        </ AppBar>
+        </AppBar>
     );
 }
 export default NavBar;
