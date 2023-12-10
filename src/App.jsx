@@ -9,7 +9,7 @@ function App() {
   const route = "portfolio";
   const LayoutApp = () => (
     <>
-      <Box >
+      <Box sx={{ position: '-webkit-sticky', top: '0px' }}>
         <NavBar />
       </Box>
       <Container >

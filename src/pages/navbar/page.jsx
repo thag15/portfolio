@@ -37,16 +37,14 @@ function NavBar() {
     };
     //
     const hdlClick = () => {
-        alert('Đang cập nhật')
-    }
+        alert("Đang cập nhật");
+    };
     return (
-        <AppBar position="fixed" sx={{ bgcolor: "#2d3436", height: '66px', }}>
+        <AppBar sx={{ bgcolor: "#2d3436", height: "66px" }}>
             <Container>
                 <Toolbar disableGutters>
                     <Typography
                         variant="h6"
-                        noWrap
-                        component="a"
                         sx={{
                             mr: 2,
                             display: { xs: "none", md: "flex" },
@@ -126,12 +124,17 @@ function NavBar() {
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: "white", display: "block" }}
                             >
-                                <NavLink to={page.name} style={{ color: '#fff' }}>{page.name}</NavLink>
+                                <NavLink to={page.name} style={{ color: "#fff" }}>
+                                    {page.name}
+                                </NavLink>
                             </Button>
                         ))}
                     </Box>
                     {!state ? (
-                        <Button onClick={() => hdlClick()} sx={{ my: 2, color: "white", display: "block" }}>
+                        <Button
+                            onClick={() => hdlClick()}
+                            sx={{ my: 2, color: "white", display: "block" }}
+                        >
                             Login
                         </Button>
                     ) : (

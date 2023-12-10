@@ -11,6 +11,7 @@ const ProjectProfile = () => {
                 position: "relative",
                 top: "12.5%",
                 alignItems: "center",
+                zIndex: "0",
             }}
         >
             <Box sx={{ width: { md: "70%", xs: "100%" } }}>
@@ -44,9 +45,9 @@ const ProjectProfile = () => {
                         Function Description:CRUD users and products, Add product to cart,
                         Paypal payment, Filter products.
                     </Typography>
-                    <Typography sx={{ display: "flex", alignItems: "center" }}>
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
                         <GitHubIcon />:
-                        <div style={{ marginLeft: "10px" }}>
+                        <Box sx={{ marginLeft: "10px" }}>
                             <span style={{ color: "red", marginRight: "10px" }}>Error</span>
                             <a href="https://github.com/thag15/fruit_project">
                                 https://github.com/thag15/fruit_project
@@ -58,8 +59,8 @@ const ProjectProfile = () => {
                             <a href="https://github.com/AndrewZKn/P_ElectricCommerce">
                                 https://github.com/AndrewZKn/P_ElectricCommerce
                             </a>
-                        </div>
-                    </Typography>
+                        </Box>
+                    </Box>
                 </Box>
             </Box>
         </Box>

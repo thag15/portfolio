@@ -1,15 +1,15 @@
-import { Box, Typography, Button } from "@mui/material";
-const cvpdf = "http://localhost:5173/demo.pdf";
+import { Box, Typography } from "@mui/material";
 const HomeProfile = () => {
     return (
         <Box
             sx={{
-                height: "100%",
+                height: '100%',
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 position: "relative",
                 top: "12.5%",
+
             }}
         >
             <Box
