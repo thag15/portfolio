@@ -25,8 +25,8 @@ const ProjectProfile = () => {
                     <Typography variant="h6" noWrap>
                         Group: 2
                     </Typography>
-                    <Typography variant="h6" noWrap>
-                        Description: Studying at NTTU University 2020-Present
+                    <Typography variant="h6">
+                        Function Description: CRUD users, posts, Search categories
                     </Typography>
 
                     <Typography
@@ -48,19 +48,24 @@ const ProjectProfile = () => {
                         Techniques: javascript(reactJS), sass, nodejs(expressJS), mongodb
                     </Typography>
                     <Typography variant="h6">Group: 4</Typography>
+                    <Typography variant="h6">
+                        Function Description:CRUD users and products, Add product to cart,
+                        Paypal payment, Filter products.
+                    </Typography>
                     <Typography
                         variant="h6"
                         sx={{ display: "flex", alignItems: "center" }}
                     >
                         <GitHubIcon />:
                         <div style={{ marginLeft: "10px" }}>
-
-                            <span style={{ color: "red", marginRight: '10px' }}>Error</span>
+                            <span style={{ color: "red", marginRight: "10px" }}>Error</span>
                             <a href="https://github.com/thag15/fruit_project">
                                 https://github.com/thag15/fruit_project
                             </a>
                             <br />
-                            <span style={{ color: "green", marginRight: '10px' }}>Present</span>
+                            <span style={{ color: "green", marginRight: "10px" }}>
+                                Present
+                            </span>
                             <a href="https://github.com/AndrewZKn/P_ElectricCommerce">
                                 https://github.com/AndrewZKn/P_ElectricCommerce
                             </a>

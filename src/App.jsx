@@ -1,5 +1,5 @@
 import NavBar from "./pages/navbar/page";
-import Profile from "./pages/profile/page";
+import Profile from "./pages/profile/index";
 import IndexProject from './pages/project/index'
 import { Container, Box } from "@mui/material";
 import { useRoutes, Outlet, useLocation } from "react-router-dom";
