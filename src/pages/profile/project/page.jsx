@@ -57,7 +57,7 @@ const ProjectProfile = () => {
                                 Present
                             </span>
                             <a href="https://github.com/AndrewZKn/P_ElectricCommerce">
-                                https://github.com/AndrewZKn/P_ElectricCommerce
+                                https://github.com/AndrewZKn/Healthy-Roo__
                             </a>
                         </Box>
                     </Box>
