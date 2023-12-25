@@ -15,7 +15,7 @@ import {
 
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
-
+import Auth from "../../components/auth/page";
 const pages = [{ name: "profile" }, { name: "myproject" }];
 const settings = ["Logout"];
 
@@ -36,9 +36,7 @@ function NavBar() {
         setAnchorElUser(null);
     };
     //
-    const hdlClick = () => {
-        alert("Đang cập nhật");
-    };
+
     return (
         <AppBar sx={{ bgcolor: "#2d3436", height: "66px" }}>
             <Container>
@@ -131,12 +129,7 @@ function NavBar() {
                         ))}
                     </Box>
                     {!state ? (
-                        <Button
-                            onClick={() => hdlClick()}
-                            sx={{ my: 2, color: "white", display: "block" }}
-                        >
-                            Login
-                        </Button>
+                        <Auth />
                     ) : (
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
